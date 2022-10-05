@@ -1,0 +1,100 @@
+/* possible colors: #0C0F0A, #FF206E, #FBFF12, #41EAD4, #FFFFFF;  */
+
+html{
+    background-color:white;
+    font-size: 20px;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+body{
+    background-color:#FF206E;
+
+}
+
+.overall{
+    /* consists of header, game, footer */
+    display: flex;
+    flex-direction: column;
+    border: 5px black solid;   
+
+}
+
+.header {
+    display: flex;
+    background-color: #0C0F0A ;
+    height: 5rem;
+    color: white;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.game{
+    /*consists of Player 1, Board, Player 2*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    
+
+}
+
+.footer{
+    display: flex;
+    background-color: #0C0F0A ;
+    /* text-align: center; */
+    height: 5rem;
+    flex-grow: 1;
+    color:white;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.classPlayer1{
+    background-color:#FFFFFF ;
+    font-size: x-large;
+    width:10%;
+    border-right: 5px black solid; 
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content:center;
+
+}
+
+.classPlayer2{
+    background-color:#FFFFFF ;
+    font-size: x-large;
+    width: 10%;
+    border-left: 5px black solid;
+}
+
+td{ 
+    height: 5em;
+    width: 5em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.color1{
+    height: 5em;
+    width: 5em;
+    background-color: #FBFF12;
+    border-radius: 50%;
+}
+
+.color2{
+    height: 5em;
+    width: 5em;
+    background-color: blue;
+    border-radius: 50%;
+
+}
+
+img{
+    height: 50px;
+    width: 50px;
+    padding: 25px;
+}
