@@ -7,40 +7,48 @@
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" defer src="app.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <title>Connect Four</title>
 </head>
 <body>
+    <div id="gameSetup">
+        <div id="gameSelection">
+            <h1>Welcome to Connect 4 by William</h1>
+            <h2>Please enter your name and the name of your opponent.</h2>
+            <h2>Enter Name: <input type="text" placeholder="Player 1 Name" id="p1Name"></h2>
+            <h2>Opponent's Name: <input type="text" placeholder="Computer if no name is entered" id="p2Name"></h2>
+
+            <button onclick='enterNames()' id="enterNames">Let's Play!!!</button>
+        </div>
+
+    </div>
+
     <div class="overall">
         <div class="header">
-            <h1>Connect 4 by William</h1>
-            <button id="reset">Reset!</button>
+            <h1>CONNECT 4 by William</h1>
+            <button onclick='resetGame()'id="reset">Reset!</button>
         </div>
 
         <div class="game">
-            <div class="classPlayer1">
+            <div class="classPlayer">
                 <p1 id="idPlayer1">Player 1</p1>
-                <p class="color1"></p>
-
+                <p2 id = p1Turn></p2>
+             
             </div>
-            <div class="board">
-                <table><!-- <img src="https://miro.medium.com/proxy/0*RCafXgnGLTWMI1qv" alt="Game Board"> -->
-               
-            </table>
+            <div id="board">   
 
             </div>
 
-
-            <div  class="classPlayer2">
+            <div  class="classPlayer">
                 <p1 id="idPlayer2">Player 2</p1>
-                <p id="player2Score">Score: XX</p>
+                <p2 id="p2Turn"></p2>
+              
             
             </div>
         </div>
 
         <div class="footer">
-            <!-- <p>This is my footer<p> -->
             <a href="https://www.facebook.com"> <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" ></a>
 
             <a href="https://www.linkedin.com"><img src ="https://cdn-icons-png.flaticon.com/512/174/174857.png"> </a>
@@ -50,6 +58,15 @@
         </div>
 
     </div>
+
+    <div id="popup">
+        <div id="popupContent">
+            <h1>Game Over</h1>
+            <h2 id="playerWinner">Player Wins</h2>
+            <h3>Want To Play Again?</h3>
+            <button onclick='resetGame()' id="again">Yes!!!</button>
+        </div>
+    </div>
     
     
 </body>
@@ -58,15 +75,16 @@
 <!-- CONNECT FOUR
 As users playing a two player game we want to:
 
-enter our names and have them displayed
-have our order chosen for us by the game
-take turns by dropping our chip into a column on the grid
-not be able to drop a chip into a totally filled column
-be told when a move causes a player to win, or to draw
-start the game over without having to reset the browser
+--done-- enter our names and have them displayed
+--done-- have our order chosen for us by the game
+--done-- take turns by dropping our chip into a column on the grid
+--done-- not be able to drop a chip into a totally filled column
+--done-- be told when a move causes a player to win, or to draw
+--done-- start the game over without having to reset the browser
+
 As a user playing a single player game I additionally want to:
 
-see the name 'Computer' displayed as my opponent
+--done-- see the name 'Computer' displayed as my opponent
 have the Computer player choose columns as if it were a human player
 As a user playing a single player game I would be delighted if:
 
